@@ -53,3 +53,9 @@ jobs:
       - name: Install Android SDK command
         run: |
           sudo apt install -y android-sdk
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-apk
+          path: bin/*.apk
