@@ -20,11 +20,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: yarn
+          cache: 'npm'
 
-      # 3. Install JS dependencies
+      # 3. Install JS dependencies with npm
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
       # 4. Setup Java (required for Android)
       - name: Setup Java
